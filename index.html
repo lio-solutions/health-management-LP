@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html class="light" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>健康経営サポート事業 LP（最終ブラッシュアップ版）</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&amp;family=Public+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#000080", // Navy
+                        "primary-dark": "#000066",
+                        "secondary": "#00bfa5", // Turquoise
+                        "secondary-dark": "#009681",
+                        "background-light": "#ffffff",
+                        "background-alt": "#f4f7f9",
+                        "text-main": "#1a1a1a",
+                        "text-muted": "#4b5563",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"],
+                        "body": ["Noto Sans JP", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                font-family: "Noto Sans JP", sans-serif;
+                color: theme('colors.text-main');
+            }
+            .text-justify-jp {
+                text-align: justify;
+                text-justify: inter-ideograph;
+            }
+        }
+        .hero-gradient {
+            background: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.85)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        .usp-image-container {
+            position: relative;
+            overflow: hidden;
+        }
+        .usp-image-container::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, transparent 40%, rgba(0, 0, 128, 0.6) 100%);
+            pointer-events: none;
+        }.vibrant-image {
+            filter: contrast(1.15) brightness(1.05) saturate(1.1);
+        }
+    </style>
+</head>
+<body class="bg-background-light antialiased">
+<header class="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/95 backdrop-blur">
+<div class="mx-auto flex h-20 max-w-[1200px] items-center justify-between px-4 sm:px-6 lg:px-8">
+<div class="flex items-center gap-3">
+<div class="flex size-10 items-center justify-center rounded-sm bg-primary text-white">
+<span class="material-symbols-outlined text-[24px]">analytics</span>
+</div>
+<div>
+<h1 class="text-lg font-black leading-tight tracking-tight text-primary">医療×経営戦略</h1>
+<p class="text-[10px] font-bold text-gray-500 uppercase">lio-solutions</p>
+</div>
+</div>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-sm font-bold hover:text-secondary transition-colors" href="#problem">経営リスク</a>
+<a class="text-sm font-bold hover:text-secondary transition-colors" href="#solution">独自の強み</a>
+<a class="text-sm font-bold hover:text-secondary transition-colors" href="#cases">導入事例</a>
+<a class="text-sm font-bold hover:text-secondary transition-colors" href="#profile">プロフィール</a>
+</nav>
+<div class="hidden md:block">
+<a class="inline-flex h-12 items-center justify-center bg-secondary px-8 text-sm font-bold text-white shadow-lg transition-all hover:bg-secondary-dark" href="#contact">
+                無料診断・お問い合わせ
+            </a>
+</div>
+</div>
+</header>
+<main>
+<section class="relative overflow-hidden hero-gradient">
+<div class="mx-auto max-w-[1200px] px-4 py-20 sm:px-6 lg:px-8 lg:py-32">
+<div class="grid gap-12 lg:grid-cols-12 items-center">
+<div class="lg:col-span-8 flex flex-col space-y-8">
+<div class="flex flex-wrap gap-3">
+<span class="inline-flex items-center gap-1.5 bg-primary text-white px-3 py-1 text-xs font-bold tracking-wider">
+<span class="material-symbols-outlined text-sm">verified</span>
+                            健康経営エキスパートアドバイザー
+                        </span>
+<span class="inline-flex items-center gap-1.5 bg-white border border-primary text-primary px-3 py-1 text-xs font-bold tracking-wider shadow-sm">
+<span class="material-symbols-outlined text-sm">license</span>
+                            医療国家資格
+                        </span>
+</div>
+<h2 class="text-4xl font-black leading-[1.2] tracking-tight text-primary sm:text-5xl lg:text-6xl">
+                        従業員の「不調」は、<br/>
+                        見えない負債である。
+                    </h2>
+<p class="text-lg font-bold text-text-muted sm:text-xl border-l-4 border-secondary pl-6 leading-relaxed max-w-2xl">
+                        医療の現場知見×経営マネジメント。<br/>
+                        2つの視点が、御社の「人的資本」と「利益」を守り抜く。
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-6">
+<a class="inline-flex h-16 items-center justify-center bg-primary px-12 text-lg font-bold text-white shadow-xl hover:bg-primary-dark transition-all" href="#contact">
+                            まずは「経営リスク」を可視化する
+                            <span class="material-symbols-outlined ml-2">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-background-alt" id="problem">
+<div class="mx-auto max-w-[1000px] px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-black text-primary sm:text-4xl mb-4">御社に、このような「損失」は<br class="hidden sm:block"/>発生していませんか？</h2>
+<div class="w-20 h-1 bg-secondary mx-auto"></div>
+</div>
+<div class="grid gap-6 md:grid-cols-2">
+<div class="bg-white p-8 border-l-4 border-red-600 shadow-sm flex items-start gap-5">
+<span class="material-symbols-outlined text-red-600 text-3xl shrink-0">person_off</span>
+<div>
+<h3 class="text-lg font-bold mb-2">ベテラン社員の健康起因による離脱</h3>
+<p class="text-sm text-text-muted leading-relaxed text-justify-jp">現場の要である50代以上の主力メンバーが、持病や急な不調で戦線離脱。ノウハウの喪失は計り知れません。</p>
+</div>
+</div>
+<div class="bg-white p-8 border-l-4 border-red-600 shadow-sm flex items-start gap-5">
+<span class="material-symbols-outlined text-red-600 text-3xl shrink-0">group_remove</span>
+<div>
+<h3 class="text-lg font-bold mb-2">従業員の入れ替わりが多い（早期離職）</h3>
+<p class="text-sm text-text-muted leading-relaxed text-justify-jp">「活気がない」「相談しづらい」環境により、コストをかけて採用した新しい従業員が定着せず流出が続く。</p>
+</div>
+</div>
+<div class="bg-white p-8 border-l-4 border-red-600 shadow-sm flex items-start gap-5">
+<span class="material-symbols-outlined text-red-600 text-3xl shrink-0">assignment_late</span>
+<div>
+<h3 class="text-lg font-bold mb-2">健康診断結果の放置（未対策）</h3>
+<p class="text-sm text-text-muted leading-relaxed text-justify-jp">健診は実施するものの、異常所見者へのフォローが形式化。重大な労災事故や訴訟リスクが潜在化しています。</p>
+</div>
+</div>
+<div class="bg-white p-8 border-l-4 border-red-600 shadow-sm flex items-start gap-5">
+<span class="material-symbols-outlined text-red-600 text-3xl shrink-0">gavel</span>
+<div>
+<h3 class="text-lg font-bold mb-2">制度対応・コンプラ対応の遅延</h3>
+<p class="text-sm text-text-muted leading-relaxed text-justify-jp">ストレスチェックや各種法改正への対応が後手に。経営者としての「安全配慮義務」の不備が問われる懸念。</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-primary text-white" id="solution">
+<div class="mx-auto max-w-[1200px] px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-black sm:text-4xl mb-6">実利なき健康経営は不要です。<br/>現場を知る「プロの介入」が組織を強くします。</h2>
+<p class="text-secondary font-bold tracking-widest uppercase">The Professional Approach</p>
+</div>
+<div class="grid gap-8 md:grid-cols-3">
+<div class="flex flex-col bg-primary-dark/50 border border-white/10 overflow-hidden shadow-2xl">
+<div class="h-64 w-full usp-image-container">
+<img alt="Medical Professional in Clinical Setting" class="h-full w-full object-cover vibrant-image transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2YcdxfaZ2WlEq9DDxFy1RZVx6AzfnN81xYK84ypVNZIIywUg8Be5STbgakN1yOoGrld9bqOTEj0jIYGLjPS3F1WTr2uWaPWOXNmdQ3iwgnXvcc7FHxCdGdI1w7H_9dngWopPqkTqVV6-VoQsSHF4kfrqufQCcMKW9AQSMKYzr5dU_bHXX7drgIshaVC2iQAJOalRN-4ptrYsMjNe_NtlbUdY4WAn5QQpT-wTvf9HhhtuhfYhOLsPzVm_G0UWb_C4wBhzHN5C54h0"/>
+</div>
+<div class="p-8 space-y-6">
+<div class="flex h-14 w-14 items-center justify-center rounded-xl bg-white text-primary">
+<span class="material-symbols-outlined text-3xl font-bold">medical_information</span>
+</div>
+<h3 class="text-xl font-bold border-b border-white/20 pb-4 italic">01. Medical Approach</h3>
+<p class="text-base leading-relaxed text-justify-jp text-white/90">
+                            柔道整復師として3万人以上の身体を診てきた「臨床の知見」に基づき、エビデンス（根拠）のある施策を提案。単なる運動推奨ではなく、痛みや不調の「根本解決」にアプローチします。
+                        </p>
+</div>
+</div>
+<div class="flex flex-col bg-primary-dark/50 border border-white/10 overflow-hidden shadow-2xl">
+<div class="h-64 w-full usp-image-container">
+<img alt="Strategic Executive Meeting" class="h-full w-full object-cover vibrant-image transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTmTQ9z0hRbW1ElTPLkm8pFZFr49RCvD8o0PazE8vKnrgAyfnjwO6J1ghDl6TSrfyjh7edNSsQ1oQjMZ9L0uI2_ZycwtMfO-CnwdMgyOZTS7t54QtWXQNGEpD1W9Mb9rX9OkBll2eR2VAmMzipwyfnkqj8M7nRpHdGE7HPKAkks0K5Hx2Z6WI5QIdypaYhaF3XChDEu6hwdOeAn8Wa_Evz2X-o-3waaSSSEHCTJiiEuGBqyKjTSa1mAflQ_QJpFbnqYSEcEqqGDnc"/>
+</div>
+<div class="p-8 space-y-6">
+<div class="flex h-14 w-14 items-center justify-center rounded-xl bg-white text-primary">
+<span class="material-symbols-outlined text-3xl font-bold">corporate_fare</span>
+</div>
+<h3 class="text-xl font-bold border-b border-white/20 pb-4 italic">02. Management Strategy</h3>
+<p class="text-base leading-relaxed text-justify-jp text-white/90">
+                            店舗経営の最前線を経験したからこそ、経営者の「数字」への責任を理解しています。健康を「福利厚生」ではなく「投資（ROI）」として捉え、生産性向上に直結するマネジメントを支援します。
+                        </p>
+</div>
+</div>
+<div class="flex flex-col bg-primary-dark/50 border border-white/10 overflow-hidden shadow-2xl">
+<div class="h-64 w-full usp-image-container">
+<img alt="Crisis Management and Safety Assurance" class="h-full w-full object-cover vibrant-image transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQX0s83gIDlZxYLubXBmQ8GYvllwgvF4i6ZEtJTPkqFEKCiflSUtKTI97Xl-S7LWhzZW9AdueIbanCf5vDhM2fwRckG-dOqpFGAhwLU0U5J_mgulTxKD64s3DI6-i25XIMhZOlWjo-ngzBCHKIYeXJ1CEgRDb9xDOjgT5hzQAKLfK9FFG-SfF08lv7ggMVj7xLzhGrW1lSyuqaHgzJuklKu8qbb-gWiSC4FZv1FbLsF5UUWZbPLczgSasuHFdicHaYgZ2zcQKD590"/>
+</div>
+<div class="p-8 space-y-6">
+<div class="flex h-14 w-14 items-center justify-center rounded-xl bg-white text-primary">
+<span class="material-symbols-outlined text-3xl font-bold">security</span>
+</div>
+<h3 class="text-xl font-bold border-b border-white/20 pb-4 italic">03. Risk Control</h3>
+<p class="text-base leading-relaxed text-justify-jp text-white/90">
+                            MFAインストラクターとして、不測の事態（心停止等）への対応、および日常の「労務リスク」を徹底管理。企業の防衛力を高め、経営者が安心して事業に集中できる環境を構築します。
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white" id="cases">
+<div class="mx-auto max-w-[1000px] px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-black text-primary">導入事例：東京商工会議所 認定モデル</h2>
+<p class="mt-4 text-text-muted font-bold italic">実利を追求した中小企業の変革</p>
+</div>
+<div class="space-y-12">
+<div class="flex flex-col lg:flex-row gap-8 bg-background-alt p-8 border border-gray-200">
+<div class="lg:w-1/3">
+<div class="aspect-video bg-gray-200 mb-4 overflow-hidden rounded shadow-md">
+<div class="w-full h-full bg-cover bg-center vibrant-image" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDD3udI8V2v2QH6Hs6wDZuzBMuajNeI4ll5xvDIzz6T7d1R7SS6Mb886DN2MPb9Rg7a2Gv1m6GzpUFUU7s2rmwkMwj6u5ksGxHSEMbLkIabD8pAJFFIQ4jgouUZmqpeLV3Y4drwChACxLmMuNMmCux7MnzLjiOmMmaaA8HcAidRJte9TkACiG8gN7JtEkwblNSGZLO8e6t7NbrV9Rhvp9LsNEEuqcDxxeX865d4EOaKJLfI-AuY7NH9tO3vFmnH6Ui9B0bMUV7c0o4');"></div>
+</div>
+<h3 class="font-black text-primary text-lg">SANKEIプランニング株式会社様</h3>
+<p class="text-xs text-text-muted mt-1 font-bold">【企画・製作・施工 / 従業員数38名】</p>
+</div>
+<div class="lg:w-2/3">
+<div class="mb-4">
+<span class="bg-secondary text-white text-[10px] font-bold px-2 py-0.5 rounded-sm uppercase tracking-wider">Solution</span>
+<h4 class="text-lg font-bold mt-2">身体負荷の高い現場の「腰痛離職」を防止</h4>
+</div>
+<p class="text-sm text-text-muted leading-relaxed mb-4 text-justify-jp">
+                            重量物の取り扱いや立ち仕事による「腰痛」が原因で、熟練工の離脱が課題でした。月に一度の「現場訪問コンディショニング」と、正しい身体操作の研修を導入。結果として、導入1年で腰痛による休職者がゼロになり、現場の作業効率が15%改善。ベテランの技術継承がスムーズになりました。
+                        </p>
+</div>
+</div>
+<div class="flex flex-col lg:flex-row gap-8 bg-background-alt p-8 border border-gray-200">
+<div class="lg:w-1/3">
+<div class="aspect-video bg-gray-200 mb-4 overflow-hidden rounded shadow-md">
+<div class="w-full h-full bg-cover bg-center vibrant-image" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCSCkcwTRqxgv8bK3-dBK9mhuh61oREFuAUkcRMmWwpaZG5NrkQLltNdoEabeeX7LgRs4G6IEPpZBId9lnjCXFOZlSzUrXqBbwgK6lTrUcrZkESdHaiojcK-itdUHI0PlkHsGDgoe8y9lmJc9WqTzi4DGjr4LTBzs2JgXCI52b3GCPbY6rA5gJ30kSYGAlYUOau9P1RDVUSp0spcJkseBUTR1CZweBDpdS7wwYM0QX4m2HmdeURQ52h-_Sc3zPqNrqX2ziVb_6TKP0');"></div>
+</div>
+<h3 class="font-black text-primary text-lg">労務管理永井事務所様</h3>
+<p class="text-xs text-text-muted mt-1 font-bold">【専門サービス業 / 従業員数10名】</p>
+</div>
+<div class="lg:w-2/3">
+<div class="mb-4">
+<span class="bg-secondary text-white text-[10px] font-bold px-2 py-0.5 rounded-sm uppercase tracking-wider">Solution</span>
+<h4 class="text-lg font-bold mt-2">「プレゼンティーズム」の改善と採用力強化</h4>
+</div>
+<p class="text-sm text-text-muted leading-relaxed mb-4 text-justify-jp">
+                            デスクワーク中心で肩こり・眼精疲労による集中力低下が顕著でした。短時間集中型のストレッチプログラムを就業時間内に導入。社員の活力指数が向上し、離職率が劇的に低下。また、「健康経営優良法人」の認定をフックに採用活動を行った結果、求人へのエントリー数が前年比で2倍に増加しました。
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-background-alt">
+<div class="mx-auto max-w-[1200px] px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-black text-primary">提供サービス</h2>
+</div>
+<div class="grid gap-8 md:grid-cols-3">
+<div class="bg-white p-10 border-t-4 border-primary shadow-sm text-center flex flex-col items-center">
+<div class="mb-6 flex items-center justify-center w-16 h-16 bg-secondary rounded-full text-white shadow-md">
+<span class="material-symbols-outlined text-4xl">fact_check</span>
+</div>
+<h3 class="text-xl font-black text-primary mb-4 leading-tight">健康経営優良法人<br/>認定取得支援</h3>
+<p class="text-sm text-text-muted leading-relaxed mb-6">現状の可視化から申請実務、次年度に向けた改善策までを並走型・ハンズオンできめ細かくサポートします。</p>
+<div class="text-left bg-gray-50 p-4 text-xs font-bold text-primary w-full">
+                        ・現状診断 / 課題抽出<br/>
+                        ・認定申請実務補助<br/>
+                        ・ロードマップ作成
+                    </div>
+</div>
+<div class="bg-white p-10 border-t-4 border-primary shadow-sm text-center flex flex-col items-center">
+<div class="mb-6 flex items-center justify-center w-16 h-16 bg-secondary rounded-full text-white shadow-md">
+<span class="material-symbols-outlined text-4xl">accessibility_new</span>
+</div>
+<h3 class="text-xl font-black text-primary mb-4 leading-tight">出張型身体ケア<br/>コンディショニング</h3>
+<p class="text-sm text-text-muted leading-relaxed mb-6">専門資格保持者がオフィスや工場へ。肩こり・腰痛のコンディショニングや、体調管理研修を御社にマッチした形式で実施します。</p>
+<div class="text-left bg-gray-50 p-4 text-xs font-bold text-primary w-full">
+                        ・ロコモティブシンドローム（転倒予防）対策<br/>
+                        ・肩こり、腰痛対策ストレッチ指導<br/>
+                        ・特定保健指導（メタボ）対策セミナー
+                    </div>
+</div>
+<div class="bg-white p-10 border-t-4 border-primary shadow-sm text-center flex flex-col items-center">
+<div class="mb-6 flex items-center justify-center w-16 h-16 bg-secondary rounded-full text-white shadow-md">
+<span class="material-symbols-outlined text-4xl">emergency</span>
+</div>
+<h3 class="text-xl font-black text-primary mb-4 leading-tight">リスク管理研修（EAP）・<br/>応急救護法講習</h3>
+<p class="text-sm text-text-muted leading-relaxed mb-6">MFA救急講習やEAP（Emergency Action Plan）の策定等、経営者が直面する「もしも」の時の備えを万全にします。</p>
+<div class="text-left bg-gray-50 p-4 text-xs font-bold text-primary w-full">
+                        ・実地AED講習（認定証発行）<br/>
+                        ・緊急時行動計画（EAP）策定<br/>
+                        ・ハラスメント防止マネジメント
+                    </div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white" id="profile">
+<div class="mx-auto max-w-[1000px] px-4">
+<div class="flex flex-col md:flex-row gap-12 items-center">
+<div class="w-64 h-64 shrink-0 overflow-hidden border-4 border-primary shadow-2xl">
+<div class="w-full h-full bg-cover bg-center vibrant-image" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDK_4XRQIMCw5GHLuVb2Kxs3ReGo578WlpeKVBiReDXy53GybqSd8Ih3Dak2otEsd5TOtwwO_fDPdIGCUbpyaYnqwhaaFbuVFQ_ZL-4HjOLh-czlI-UBRBJlGwYzyAIQLG6ouKBQh3HcxY1o50To0HqoRSZ7Zs38jNJrPMiRFYE-6BeIvW4-AiEw3blr2weCbV2auQWgaui-DtHiHLkPDsFp-wvMG5Wrc9nU1DWLBYoFYpqHbOHEi1HCyoXp1X_rhmAxRhcTJkEWG8');"></div>
+</div>
+<div class="flex-1">
+<p class="text-secondary font-black tracking-widest uppercase mb-2">Consultant Profile</p>
+<h2 class="text-3xl font-black text-primary mb-1">渡邉 和人 <span class="text-sm font-medium text-gray-500 ml-2">Kazuto Watanabe</span></h2>
+<p class="text-lg font-bold text-primary mb-6 italic">「医療」と「経営」を橋渡しする専門家</p>
+<div class="space-y-4 text-sm leading-relaxed text-justify-jp border-l-2 border-gray-200 pl-6">
+<p>整形外科での臨床経験10年以上。延べ3万人以上の不調を改善してきた<strong>「リハビリ医療の現場」</strong>。そして、<strong>「企業でのマネジメントおよび店舗の経営者」</strong>として人財・数字・オペレーションを統括した現場。この両極を知るからこそ、単なるお題目の健康経営ではなく、現場が動き、利益が守られる戦略的なアプローチが可能です。</p>
+<p>「従業員の健康こそが最大の経営資源である」という信念のもと、中小企業の「不調という名の負債」を資産に変える支援を行っています。</p>
+</div>
+<div class="flex flex-wrap gap-2 mt-8">
+<span class="px-3 py-1 bg-primary text-white text-[11px] font-bold">健康経営エキスパートアドバイザー</span>
+<span class="px-3 py-1 bg-primary text-white text-[11px] font-bold">柔道整復師</span>
+<span class="px-3 py-1 bg-primary text-white text-[11px] font-bold">MFAインストラクター</span>
+<span class="px-3 py-1 bg-primary text-white text-[11px] font-bold">健康運動指導士</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-background-alt" id="faq">
+<div class="mx-auto max-w-[800px] px-4">
+<h2 class="text-3xl font-black text-primary text-center mb-16">よくある質問</h2>
+<div class="space-y-4">
+<div class="bg-white border border-gray-200 shadow-sm p-8 rounded-sm">
+<div class="flex items-start gap-4">
+<span class="text-secondary font-black text-xl shrink-0">Q.</span>
+<h3 class="font-bold text-primary text-lg">現場の従業員の作業時間を増加させたくないのですが。</h3>
+</div>
+<div class="mt-4 pl-9 text-sm leading-relaxed text-text-muted text-justify-jp">
+                        ご安心ください。主に業務の隙間時間を活用した「短時間集中型」のプログラムの実施を計画し、生産性を落とさずに実施します。
+                    </div>
+</div>
+<div class="bg-white border border-gray-200 shadow-sm p-8 rounded-sm">
+<div class="flex items-start gap-4">
+<span class="text-secondary font-black text-xl shrink-0">Q.</span>
+<h3 class="font-bold text-primary text-lg">健康経営の効果やメリットが見えにくいのですが。</h3>
+</div>
+<div class="mt-4 pl-9 text-sm leading-relaxed text-text-muted text-justify-jp">
+                        御社の状況に合わせ、助成金の活用も視野に入れた負担の少ないプランを用意したうえで効果やメリットをご説明します。また、病欠（アブセンティーズム）の削減はもちろん、高齢化や体調不良により「出勤しているがパフォーマンスが落ちている状態（プレゼンティーズム）」を抑制し、組織全体の生産性を維持・向上させることを目的としています。
+                    </div>
+</div>
+<div class="bg-white border border-gray-200 shadow-sm p-8 rounded-sm">
+<div class="flex items-start gap-4">
+<span class="text-secondary font-black text-xl shrink-0">Q.</span>
+<h3 class="font-bold text-primary text-lg">まずはじめに、経営者は何から取り組めばいいですか？</h3>
+</div>
+<div class="mt-4 pl-9 text-sm leading-relaxed text-text-muted text-justify-jp">
+                        経営者様には「健康経営に取り組む」という方針を社内外に宣言していただくだけで結構です。具体的な制度設計や運用、従業員様への指導などは全てハンズオンでサポートいたしますので、本来の経営業務に集中いただけます。
+                    </div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white" id="contact">
+<div class="mx-auto max-w-[800px] px-4">
+<div class="bg-primary text-white p-12 text-center shadow-2xl">
+<h2 class="text-3xl font-black mb-4">まずは御社の「隠れた経営リスク」を<br/>可視化しませんか？</h2>
+<p class="text-secondary font-bold mb-8">無理な売り込みは一切いたしません。現状の整理だけでもお役立てください。</p>
+<div class="inline-block bg-white/10 px-8 py-3 text-sm font-bold border border-white/20">
+                    無料オンライン診断（30分）実施中
+                </div>
+</div>
+<div class="bg-background-alt p-10 shadow-lg border-x border-b border-gray-200">
+<form class="space-y-6">
+<div class="grid md:grid-cols-2 gap-6">
+<div>
+<label class="block text-xs font-black text-primary uppercase tracking-widest mb-2" for="company">会社名</label>
+<input class="w-full border-gray-300 focus:border-primary focus:ring-0 px-4 py-3 text-sm" id="company" placeholder="株式会社〇〇" required="" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-black text-primary uppercase tracking-widest mb-2" for="name">担当者名</label>
+<input class="w-full border-gray-300 focus:border-primary focus:ring-0 px-4 py-3 text-sm" id="name" placeholder="渡邉 太郎" required="" type="text"/>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-6">
+<div>
+<label class="block text-xs font-black text-primary uppercase tracking-widest mb-2" for="email">メールアドレス</label>
+<input class="w-full border-gray-300 focus:border-primary focus:ring-0 px-4 py-3 text-sm" id="email" placeholder="example@domain.com" required="" type="email"/>
+</div>
+<div>
+<label class="block text-xs font-black text-primary uppercase tracking-widest mb-2" for="phone">電話番号</label>
+<input class="w-full border-gray-300 focus:border-primary focus:ring-0 px-4 py-3 text-sm" id="phone" placeholder="00-0000-0000" required="" type="tel"/>
+</div>
+</div>
+<div>
+<label class="block text-xs font-black text-primary uppercase tracking-widest mb-2" for="message">ご相談内容（現状の課題など）</label>
+<textarea class="w-full border-gray-300 focus:border-primary focus:ring-0 px-4 py-3 text-sm" id="message" placeholder="健康経営優良法人の取得を検討している、社員の腰痛離職が多い、など" rows="4"></textarea>
+</div>
+<button class="w-full bg-secondary text-white font-black py-5 text-lg shadow-lg hover:bg-secondary-dark transition-all flex items-center justify-center gap-3" type="submit">
+                        無料相談・診断を申し込む
+                        <span class="material-symbols-outlined">send</span>
+</button>
+<p class="text-[10px] text-center text-text-muted mt-4 italic">
+                        ※送信後、1営業日以内にご返信申し上げます。お客様の情報は厳重に管理されます。
+                    </p>
+</form>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-primary py-16 text-white/60">
+<div class="mx-auto max-w-[1200px] px-4">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 border-b border-white/10 pb-12 mb-12">
+<div class="space-y-4">
+<div class="flex items-center gap-3 text-white">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-black text-xl tracking-tight">lio-solutions</span>
+</div>
+<p class="text-xs leading-relaxed max-w-xs">
+                    医療の現場知見と経営マネジメントを融合させ、企業の持続可能な成長と、働く人々の幸福を支えます。
+                </p>
+</div>
+<div class="space-y-4">
+<h4 class="text-white font-bold text-sm">Site Menu</h4>
+<ul class="text-xs space-y-2">
+<li><a class="hover:text-white transition-colors" href="#">サービス案内</a></li>
+<li><a class="hover:text-white transition-colors" href="#">導入事例</a></li>
+<li><a class="hover:text-white transition-colors" href="#">プロフィール</a></li>
+<li><a class="hover:text-white transition-colors" href="#contact">お問い合わせ</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-white font-bold text-sm">Policies</h4>
+<ul class="text-xs space-y-2">
+<li><a class="hover:text-white transition-colors" href="#">プライバシーポリシー</a></li>
+<li><a class="hover:text-white transition-colors" href="#">特定商取引法に基づく表記</a></li>
+</ul>
+</div>
+</div>
+<div class="text-center text-[10px] tracking-widest">
+            © 2026 lio-solutions. All Rights Reserved.
+        </div>
+</div>
+</footer>
+<div class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 p-4 md:hidden z-40">
+<a class="flex w-full items-center justify-center bg-secondary py-4 text-sm font-bold text-white shadow-xl" href="#contact">
+        無料相談を申し込む
+    </a>
+</div>
+</body></html>
